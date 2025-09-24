@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directorio Interno Telecable</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="site">
+    <div class="layout">
+      <header class="layout-header">
+        <div class="layout-header-logo">
+          <img src="/assets/Logo.png" alt="Telecable Logo" class="logo" />
+          <h1>Directorio Telecable</h1>
+        </div>
+        <!-- barra de navegacion -->
+        <div class="layout-header-bar">
+          <div class="layout-header-nav">
+            <nav id="app-nav" class="nav">
+              <a href="#oficinas" class="nav-link">Oficinas</a>
+              <a href="#desarrollos" class="nav-link">Desarrollos</a>
+              <a href="#extensiones" class="nav-link">Extensiones (PBX)</a>
+            </nav>
+          </div>
+          <div class="layout-header-search">
+            <input
+              type="text"
+              id="search-input"
+              class="search-input"
+              placeholder="🔍 Buscar..."
+            />
+          </div>
+        </div>
+      </header>
+      <section id="app-content" class="content">
+        <!-- Contenido dinámico cargado por app.js -->
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
