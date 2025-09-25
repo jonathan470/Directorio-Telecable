@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="../styles.css" />
+<section>
+  <div class="layout-oficinas">
+    <div class="layout-oficinas-header">
+      <h1>Registro Oficinas</h1>
+      <button class="button-nueva-oficina">+ Añadir nueva oficina</button>
+    </div>
+    <div class="filter-container">
+      <div class="filter-box">
+        <input
+          type="text"
+          id="filter-input"
+          class="filter-input"
+          placeholder="🔍 Filtrar oficinas..."
+        />
+      </div>
+      <div class="filter-box-city">
+        <select id="filter-city" class="filter-city">
+          <option value="">Ciudades</option>
+          <option value="Cali">Cali</option>
+          <option value="Florida">Florida</option>
+          <option value="Pradera">Pradera</option>
+          <option value="Tulua">Tulua</option>
+          <option value="Tarqui">Tarqui</option>
+          <option value="Candelaria">Candelaria</option>
+        </select>
+      </div>
+      <div>
+        <select name="filter-departament" id="filter-departament">
+          <option value="">Departamentos</option>
+          <option value="Valle del Cauca">Valle del Cauca</option>
+        </select>
+      </div>
+    </div>
+    <div class="table-container">
+        <div>
+            <table class="oficinas-table">
+                <thead>
+          <tr>
+            <th>Oficina</th>
+            <th>Direccion</th>
+            <th>Administrador</th>
+            <th>Accion</th>
+          </tr>
+        </thead>
+        </div>
+        <tbody id="oficinas-tbody">
+          <!-- Filas de oficinas se insertan aquí dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
