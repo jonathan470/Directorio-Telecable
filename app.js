@@ -29,35 +29,26 @@ document.addEventListener("DOMContentLoaded", () => {
 // Datos simulados de oficinas
 const oficinasData = [
   {
-    nombre: "Oficina Centro",
-    direccion: "123 Main Street, Anytown",
-    ciudad: "Anytown",
-    departamento: "State",
-    administrador: "Olivia Bennett",
-    pbx: "101",
-    telefono: "(555) 123-4567",
-    barrios: ["Centro", "San Nicolás", "La Merced"],
+    nombre: "Oficina Mariano Ramos",
+    direccion: "CR 46 40 14 LOCAL 1-09",
+    ciudad: "Cali",
+    departamento: "Valle del cauca",
+    administrador: "JHOINER ARTURO BARBOSA OTALVARO",
+    pbx: "1221",
+    telefono: "3242979487",
+    barrios: ["MARIANO RAMOS", "REPUBLICA DE ISRAEL", "BRISAS DEL LIMONAR"],
     planes: [
-      { nombre: "300 megas", precio: "$70.00" },
-      { nombre: "600 megas", precio: "$95.00" },
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
     ],
-    puntosRecaudo: [
-      { nombre: "Efecty Centro", direccion: "Calle 123 #45-67" },
-      { nombre: "GanaGana Principal", direccion: "Calle 89 #12-34" },
-    ],
+    puntosRecaudo: [{ nombre: "NO", direccion: " " }],
     personalAdicional: [
       {
-        nombre: "Ana María Rodríguez",
-        cargo: "Retención",
+        nombre: "NO",
+        cargo: "´NO",
         pbx: "",
         telefono: "",
-      },
-      { nombre: "Carlos Pérez", cargo: "Caja", pbx: "", telefono: "987654321" },
-      {
-        nombre: "Sofía Gómez",
-        cargo: "Soporte Técnico",
-        pbx: "",
-        telefono: "123456789",
       },
     ],
   },
@@ -136,7 +127,7 @@ function renderVistaOficina() {
       <h2>Puntos de Recaudo</h2>
       <ul>
         ${oficina.puntosRecaudo
-          .map((p) => `<li>${p.nombre} – ${p.direccion}</li>`)
+          .map((p) => `<li>${p.nombre} ${p.direccion}</li>`)
           .join("")}
       </ul>
 
