@@ -2,7 +2,7 @@
 // Credenciales válidas
 // ==========================
 const credencialesValidas = [
-  { email: "admin@telecable.com", password: "admin123" },
+  { email: "soporte.riocauca@cablecauca.com", password: "admin123" },
   { email: "soporte@telecable.com", password: "soporte456" },
 ];
 
@@ -48,6 +48,13 @@ document.addEventListener("submit", (e) => {
   if (form.matches("form")) {
     e.preventDefault();
 
+    // Ocultar mensaje de error si existe
+    const errorDiv = document.getElementById("login-error");
+    if (errorDiv) {
+      errorDiv.style.display = "none";
+      errorDiv.textContent = "";
+    }
+
     const email = form.username?.value.trim();
     const password = form.password?.value.trim();
 
@@ -59,7 +66,12 @@ document.addEventListener("submit", (e) => {
       localStorage.setItem("usuarioAutenticado", "true");
       window.location.href = "views/home.html";
     } else {
-      alert("❌ Credenciales incorrectas. Intenta de nuevo.");
+      if (errorDiv) {
+        errorDiv.textContent = "❌ Credenciales incorrectas. Intenta de nuevo.";
+        errorDiv.style.display = "block";
+      } else {
+        alert("❌ Credenciales incorrectas. Intenta de nuevo.");
+      }
     }
   }
 });
