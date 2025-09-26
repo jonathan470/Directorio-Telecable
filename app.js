@@ -82,13 +82,13 @@ document.addEventListener("submit", (e) => {
 const oficinasData = [
   {
     nombre: "Oficina Mariano Ramos",
-    direccion: "CR 46 40 14 LOCAL 1-09",
+    direccion: "CR 46 40 14 LOCAL 1-09 - San Andresito del Oriente",
     ciudad: "Cali",
     departamento: "Valle del cauca",
-    administrador: "JHOINER ARTURO BARBOSA OTALVARO",
+    administrador: "Jhoiner Arturo Barbosa Otalvaro",
     pbx: "1221",
     telefono: "3242979487",
-    barrios: ["MARIANO RAMOS", "REPUBLICA DE ISRAEL", "BRISAS DEL LIMONAR"],
+    barrios: ["Mariano Ramos", "Republica de Israel", "Brisas del Limonar"],
     planes: [
       { nombre: "100 megas", precio: "$50.000" },
       { nombre: "300 megas", precio: "$70.000" },
@@ -103,6 +103,161 @@ const oficinasData = [
         telefono: "",
       },
     ],
+  },
+  {
+    nombre: "Oficina Ceibas",
+    direccion: "CR 7L BIS 66 05 - Ceibas",
+    ciudad: "Cali",
+    departamento: "Valle del cauca",
+    administrador: "Erika Rivas",
+    pbx: "1125",
+    telefono: "3145881541",
+    barrios: ["Las ceibas", "San Marino", "Los pinos", "Cali Bella", "Alfonso Lopez I", "Fepicol", "Las veraneras"],
+    planes: [
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
+    ],
+    puntosRecaudo: [{ nombre: "NO", direccion: " " }],
+    personalAdicional: [
+      {
+        nombre: "NO",
+        cargo: "NO",
+        pbx: "",
+        telefono: "",
+      },
+    ],
+  },
+  {
+    nombre: "Oficina Villa nueva",
+    direccion: "CL 50 28G 68 - 12 de Octubre",
+    ciudad: "Cali",
+    departamento: "Valle del cauca",
+    administrador: "Diana Carolina Dorado Guauña",
+    pbx: "1117",
+    telefono: "3103760868",
+    barrios: ["12 de Octubre", "Villa del Sur", "Idenpendecia", "Conquistadores", "Eduerdado Santos", "Paraiso", "Paraiso", "Gran Colombia", "Yira Castro", "Rodeo", "Asturias","Bello Horizonte", "San pedro"],
+    planes: [
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
+    ],
+    puntosRecaudo: [{ nombre: "Drogueria VJ", direccion: "- Dg 30 31 23 San Pedro Claver" }],
+    personalAdicional: [
+      {
+        nombre: "NO",
+        cargo: "NO",
+        pbx: "",
+        telefono: "",
+      },
+    ],
+  },
+  {
+    nombre: "Oficina Poblado",
+    direccion: "CR 28F 72J 15 - Poblado",
+    ciudad: "Cali",
+    departamento: "Valle del cauca",
+    administrador: "Maria Eugenia Diaz",
+    pbx: "1135",
+    telefono: "3151907600",
+    barrios: ["Robles", "Poblado I", "Poblado II"],
+    planes: [
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
+    ],
+    puntosRecaudo: [{ nombre: "Punto de recaudo Zona Virtual", direccion: "" }],
+    personalAdicional: [
+      {
+        nombre: "NO",
+        cargo: "NO",
+        pbx: "",
+        telefono: "",
+      },
+    ],
+  },
+  {
+    nombre: "Oficina Rio Cauca",
+    direccion: "CL 75B 23A 81 - Centro Comercial Rio Cauca LOCAL 73",
+    ciudad: "Cali",
+    departamento: "Valle del cauca",
+    administrador: "Sandra Balanta",
+    pbx: "1127",
+    telefono: "3126436349",
+    barrios: ["Puertas del sol", "Decepaz (Liderez Decepaz, Remansos De comfandi, Ciudadela del Rio, Manantial, Compartir)", "Manuela Beltran", "Invicali", "Torres de Rio Cauca", "Centro Comercial Rio Cauca"],
+    planes: [
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
+    ],
+    puntosRecaudo: [{ nombre: "Ferreteria Multicenter", direccion: "- CL 112 26B1 05" },{ nombre: "Peluqueria Marizolany", direccion: "- CL 123 26H2 19" }, { nombre: "Efecty decepaz", direccion: "- CL 120F 22 14" }, { nombre: "Zona Cell", direccion: "- CR 26D 94 122" }, { nombre: "Punto de pago Decepaz", direccion: "- CL 120I 22 49" }, { nombre: "Punto de pago Puertas del sol", direccion: "- CL 96A 26B1 101" },],
+
+    personalAdicional: [
+      {
+        nombre: "Ana Yibe Fontal",
+        cargo: "Rentencion - Caja",
+        pbx: "NO",
+        telefono: "3161561740",
+      },
+    ],
+  },
+  {
+    nombre: "Oficina Cordoba Reservado",
+    direccion: "CR 47 55A 37 - Cordoba Reservado",
+    ciudad: "Cali",
+    departamento: "Valle del cauca",
+    administrador: "Vanessa Villegas G",
+    pbx: "1130",
+    telefono: "3155599161",
+    barrios: ["Cordoba Reservado", "Llano Verde", "Morichal de comfandi"],
+    planes: [
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
+    ],
+    puntosRecaudo: [{ nombre: "NO", direccion: "" }],
+      
+    personalAdicional: [
+      {
+        nombre: "NO",
+        cargo: "NO",
+        pbx: "",
+        telefono: "",
+      },
+    ],
+  },
+  {
+    nombre: "Oficina Comuneros",
+    direccion: "CL 55 29A 123 - Comuneros",
+    ciudad: "Cali",
+    departamento: "Valle del cauca",
+    administrador: "Claudia Vargas",
+    pbx: "1112",
+    telefono: "3243714326",
+    barrios: ["Bonilla Aragon", "Laureano Gomez", "Comuneros I", "Mojica", "Pilar Tairona", "Unidad Portal del Parque"],
+    planes: [
+      { nombre: "50 megas", precio: "$40.000 Migracion de TV" },
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
+    
+    ],
+    puntosRecaudo: [{ nombre: "Drogueria Nuevo Latir", direccion: "- CR 28D 80 16" }, { nombre: "Servientrega Laureano Gomez", direccion: "- CL 32A 50 13" }, { nombre: "Efecty Mojica", direccion: "- CL 72z1 28e6 81" }, { nombre: "Punto de pago Bonilla", direccion: "- CL 92 28 11" }, { nombre: " Segundo Punto de pago Bonilla ", direccion: "- CR 26P5 87 67" }],
+
+    personalAdicional: [
+      {
+        nombre: "Luisa Triviño",
+        cargo: "Retencion",
+        pbx: "1212",
+        telefono: "3178899837",
+      },
+      {
+        nombre: "Brush Zapata",
+        cargo: "Caja",
+        pbx: "1116",
+        telefono: "NO",
+      },
+    ],  
   },
 ];
 

@@ -319,6 +319,7 @@ label {
   border-collapse: collapse;
   margin-top: 10px;
   font-size: 16px;
+  font-weight: bold;
 }
 
 .oficinas-table thead {
