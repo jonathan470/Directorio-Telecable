@@ -1,6 +1,16 @@
-// Detectar navegación por hash y cargar vista correspondiente
+// ==========================
+// Credenciales válidas
+// ==========================
+const credencialesValidas = [
+  { email: "admin@telecable.com", password: "admin123" },
+  { email: "soporte@telecable.com", password: "soporte456" },
+];
+
+// ==========================
+// Cargar vistas por hash
+// ==========================
 function cargarVista(ruta) {
-  fetch(`views/${ruta}.html`)
+  fetch(`${ruta}.html`)
     .then((res) => res.text())
     .then((html) => {
       document.getElementById("app-content").innerHTML = html;
@@ -14,19 +24,49 @@ function cargarVista(ruta) {
     });
 }
 
+// ==========================
 // Escuchar cambios en el hash
+// ==========================
 window.addEventListener("hashchange", () => {
   const ruta = location.hash.replace("#", "");
   if (ruta) cargarVista(ruta);
 });
 
+// ==========================
 // Cargar vista inicial
+// ==========================
 document.addEventListener("DOMContentLoaded", () => {
   const rutaInicial = location.hash.replace("#", "") || "oficinas";
   cargarVista(rutaInicial);
 });
 
+// ==========================
+// Validar login
+// ==========================
+document.addEventListener("submit", (e) => {
+  const form = e.target;
+  if (form.matches("form")) {
+    e.preventDefault();
+
+    const email = form.username?.value.trim();
+    const password = form.password?.value.trim();
+
+    const esValido = credencialesValidas.some(
+      (cred) => cred.email === email && cred.password === password
+    );
+
+    if (esValido) {
+      localStorage.setItem("usuarioAutenticado", "true");
+      window.location.href = "views/index.html";
+    } else {
+      alert("❌ Credenciales incorrectas. Intenta de nuevo.");
+    }
+  }
+});
+
+// ==========================
 // Datos simulados de oficinas
+// ==========================
 const oficinasData = [
   {
     nombre: "Oficina Mariano Ramos",
@@ -46,7 +86,7 @@ const oficinasData = [
     personalAdicional: [
       {
         nombre: "NO",
-        cargo: "´NO",
+        cargo: "NO",
         pbx: "",
         telefono: "",
       },
@@ -54,7 +94,9 @@ const oficinasData = [
   },
 ];
 
+// ==========================
 // Renderizar tabla de oficinas
+// ==========================
 function renderOficinas() {
   const tbody = document.getElementById("oficinas-tbody");
   if (!tbody) return;
@@ -86,7 +128,9 @@ function renderOficinas() {
   });
 }
 
+// ==========================
 // Renderizar vista detallada
+// ==========================
 function renderVistaOficina() {
   const section = document.getElementById("oficinas-section");
   if (!section) return;
@@ -148,4 +192,12 @@ function renderVistaOficina() {
       </ul>
     </div>
   `;
+}
+
+// ==========================
+// Función para cerrar sesión
+// ==========================
+function cerrarSesion() {
+  localStorage.removeItem("usuarioAutenticado");
+  window.location.href = "../login.html";
 }
