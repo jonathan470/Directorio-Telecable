@@ -57,7 +57,7 @@ document.addEventListener("submit", (e) => {
 
     if (esValido) {
       localStorage.setItem("usuarioAutenticado", "true");
-      window.location.href = "views/index.html";
+      window.location.href = "views/home.html";
     } else {
       alert("❌ Credenciales incorrectas. Intenta de nuevo.");
     }
