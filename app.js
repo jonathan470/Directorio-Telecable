@@ -85,7 +85,7 @@ const oficinasData = [
     direccion: "CR 46 40 14 LOCAL 1-09 - San Andresito del Oriente",
     ciudad: "Cali",
     departamento: "Valle del cauca",
-    administrador: "Jhoiner Arturo Barbosa Otalvaro",
+    administrador: "Sandra Balanta",
     pbx: "1221",
     telefono: "3242979487",
     barrios: ["Mariano Ramos", "Republica de Israel", "Brisas del Limonar"],
@@ -181,7 +181,7 @@ const oficinasData = [
     direccion: "CL 75B 23A 81 - Centro Comercial Rio Cauca LOCAL 73",
     ciudad: "Cali",
     departamento: "Valle del cauca",
-    administrador: "Sandra Balanta",
+    administrador: "Alejandra Giraldo",
     pbx: "1127",
     telefono: "3126436349",
     barrios: ["Puertas del sol", "Decepaz (Liderez Decepaz, Remansos De comfandi, Ciudadela del Rio, Manantial, Compartir)", "Manuela Beltran", "Invicali", "Torres de Rio Cauca", "Centro Comercial Rio Cauca"],
@@ -194,7 +194,7 @@ const oficinasData = [
 
     personalAdicional: [
       {
-        nombre: "Ana Yibe Fontal",
+        nombre: "Jhan Paul Sarria",
         cargo: "Rentencion - Caja",
         pbx: "NO",
         telefono: "3161561740",
@@ -246,19 +246,124 @@ const oficinasData = [
 
     personalAdicional: [
       {
-        nombre: "Luisa Triviño",
+        nombre: "Brush Zapata",
         cargo: "Retencion",
         pbx: "1212",
         telefono: "3178899837",
       },
       {
-        nombre: "Brush Zapata",
+        nombre: "Ana Yibe Fontal",
         cargo: "Caja",
         pbx: "1116",
         telefono: "NO",
       },
     ],  
   },
+  {
+    nombre: "Oficina Marroquin",
+    direccion: "CR 26M2 87 04 - Marroquin 1",
+    ciudad: "Cali",
+    departamento: "Valle del cauca",
+    administrador: "Leidy Johana Ospina",
+    pbx: "1136",
+    telefono: "3122421002",
+    barrios: ["Marroquin 1", "Marroquin 2", "Alirio Mora", "Los Naranjos"],
+    planes: [
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
+    
+    ],
+    puntosRecaudo: [{ nombre: "Punto de pago Alirio Mora", direccion: "- CL 76 26B1 26" }, { nombre: "Miscelanea la 74", direccion: "- CR 75B 26A 28" }, { nombre: "Punto de pago Puertas del sol", direccion: "- CL 96A 26B1 101" }, { nombre: "Punto de pago Marroquin 2", direccion: "- CR 26G9 73 39" }, { nombre: "Punto de pago Marroquin 1", direccion: "- CR 25P5 87 67" }],
+
+    personalAdicional: [
+      {
+        nombre: "Maira Hernandez",
+        cargo: "Retencion, caja",
+        pbx: "1105",
+        telefono: "3128655642",
+      },
+      
+    ],  
+  },
+  {
+    nombre: "Oficina Chorros",
+    direccion: "CL 1 BIS OESTE 73D 85B - Mario Correa ",
+    ciudad: "Cali",
+    departamento: "Valle del cauca",
+    administrador: "Sharon Fuentes",
+    pbx: "1110",
+    telefono: "3182838808",
+    barrios: ["Mario Correa", "Chorros", "Louders", "Prados del Sur", "La marranera", "Golositos", "Alto Napoles"],
+    planes: [
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
+    
+    ],
+    puntosRecaudo: [{ nombre: "Sala de internet Marlin", direccion: "- CL 3C OESTE 90 15" }, { nombre: "Miscelanea Raquel", direccion: "- CR 94A 1 60" }],
+
+    personalAdicional: [
+      {
+        nombre: "NO",
+        cargo: "NO",
+        pbx: "",
+        telefono: "",
+      },
+    ],  
+  },
+  {
+    nombre: "Oficina Montebello",
+    direccion: "CL 12 OESTE 42 12 - Centro Montebello ",
+    ciudad: "Cali",
+    departamento: "Valle del cauca",
+    administrador: "Jhoiner Arturo Barbosa Otalvaro",
+    pbx: "1211",
+    telefono: "3147773428",
+    barrios: ["Montebello"],
+    planes: [
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
+    
+    ],
+    puntosRecaudo: [{ nombre: "Tienda Kary", direccion: "- AV 47 OESTE 9A 112" }, { nombre: "Tienda Luz Mery", direccion: "- CL 4 OESTE 43A 07" }, { nombre: "Parasol Rojo", direccion: "- CL 12 OESTE 36 42" }],
+
+    personalAdicional: [
+      {
+        nombre: "NO",
+        cargo: "NO",
+        pbx: "",
+        telefono: "",
+      },
+    ],  
+  },
+  {
+    nombre: "Oficina Siloe",
+    direccion: "CL 1 OESTE 52 370 - Belizario Siloe ",
+    ciudad: "Cali",
+    departamento: "Valle del cauca",
+    administrador: "Yulisa Ocoro Betancurth",
+    pbx: "1111",
+    telefono: "3188073456",
+    barrios: ["Siloe"],
+    planes: [
+      { nombre: "20 megas", precio: "$60.000" },
+      { nombre: "TV", precio: "$30.000" },
+    ],
+    puntosRecaudo: [{ nombre: "Punto de recuado Oliva vivas", direccion: "- CL 10 OESTE 50G 27" }, { nombre: "Punto de recuado Maitte Silva", direccion: "- CL 10 OESTE 49C 40" }, { nombre: "Punto de recuado Eimmy muñoz", direccion: "- CL 10 OESTE 50 53" }, { nombre: "Punto de recuado Monica Valencia", direccion: "- CL 14 OESTE 48 68" }, { nombre: "Punto de recuado Geidy Martinez", direccion: "- CL 13 531 42" }],
+
+    personalAdicional: [
+      {
+        nombre: "NO",
+        cargo: "NO",
+        pbx: "",
+        telefono: "",
+      },
+    ],  
+  },
+  
+  
 ];
 
 // ==========================
