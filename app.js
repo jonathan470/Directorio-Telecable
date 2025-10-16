@@ -112,7 +112,15 @@ const oficinasData = [
     administrador: "Erika Rivas",
     pbx: "1125",
     telefono: "3145881541",
-    barrios: ["Las ceibas", "San Marino", "Los pinos", "Cali Bella", "Alfonso Lopez I", "Fepicol", "Las veraneras"],
+    barrios: [
+      "Las ceibas",
+      "San Marino",
+      "Los pinos",
+      "Cali Bella",
+      "Alfonso Lopez I",
+      "Fepicol",
+      "Las veraneras",
+    ],
     planes: [
       { nombre: "100 megas", precio: "$50.000" },
       { nombre: "300 megas", precio: "$70.000" },
@@ -136,13 +144,29 @@ const oficinasData = [
     administrador: "Diana Carolina Dorado Guauña",
     pbx: "1117",
     telefono: "3103760868",
-    barrios: ["12 de Octubre", "Villa del Sur", "Idenpendecia", "Conquistadores", "Eduerdado Santos", "Paraiso", "Paraiso", "Gran Colombia", "Yira Castro", "Rodeo", "Asturias","Bello Horizonte", "San pedro"],
+    barrios: [
+      "12 de Octubre",
+      "Villa del Sur",
+      "Idenpendecia",
+      "Conquistadores",
+      "Eduerdado Santos",
+      "Paraiso",
+      "Paraiso",
+      "Gran Colombia",
+      "Yira Castro",
+      "Rodeo",
+      "Asturias",
+      "Bello Horizonte",
+      "San pedro",
+    ],
     planes: [
       { nombre: "100 megas", precio: "$50.000" },
       { nombre: "300 megas", precio: "$70.000" },
       { nombre: "600 megas", precio: "$95.000" },
     ],
-    puntosRecaudo: [{ nombre: "Drogueria VJ", direccion: "- Dg 30 31 23 San Pedro Claver" }],
+    puntosRecaudo: [
+      { nombre: "Drogueria VJ", direccion: "- Dg 30 31 23 San Pedro Claver" },
+    ],
     personalAdicional: [
       {
         nombre: "NO",
@@ -184,13 +208,30 @@ const oficinasData = [
     administrador: "Alejandra Giraldo",
     pbx: "1127",
     telefono: "3126436349",
-    barrios: ["Puertas del sol", "Decepaz (Liderez Decepaz, Remansos De comfandi, Ciudadela del Rio, Manantial, Compartir)", "Manuela Beltran", "Invicali", "Torres de Rio Cauca", "Centro Comercial Rio Cauca"],
+    barrios: [
+      "Puertas del sol",
+      "Decepaz (Liderez Decepaz, Remansos De comfandi, Ciudadela del Rio, Manantial, Compartir)",
+      "Manuela Beltran",
+      "Invicali",
+      "Torres de Rio Cauca",
+      "Centro Comercial Rio Cauca",
+    ],
     planes: [
       { nombre: "100 megas", precio: "$50.000" },
       { nombre: "300 megas", precio: "$70.000" },
       { nombre: "600 megas", precio: "$95.000" },
     ],
-    puntosRecaudo: [{ nombre: "Ferreteria Multicenter", direccion: "- CL 112 26B1 05" },{ nombre: "Peluqueria Marizolany", direccion: "- CL 123 26H2 19" }, { nombre: "Efecty decepaz", direccion: "- CL 120F 22 14" }, { nombre: "Zona Cell", direccion: "- CR 26D 94 122" }, { nombre: "Punto de pago Decepaz", direccion: "- CL 120I 22 49" }, { nombre: "Punto de pago Puertas del sol", direccion: "- CL 96A 26B1 101" },],
+    puntosRecaudo: [
+      { nombre: "Ferreteria Multicenter", direccion: "- CL 112 26B1 05" },
+      { nombre: "Peluqueria Marizolany", direccion: "- CL 123 26H2 19" },
+      { nombre: "Efecty decepaz", direccion: "- CL 120F 22 14" },
+      { nombre: "Zona Cell", direccion: "- CR 26D 94 122" },
+      { nombre: "Punto de pago Decepaz", direccion: "- CL 120I 22 49" },
+      {
+        nombre: "Punto de pago Puertas del sol",
+        direccion: "- CL 96A 26B1 101",
+      },
+    ],
 
     personalAdicional: [
       {
@@ -216,7 +257,7 @@ const oficinasData = [
       { nombre: "600 megas", precio: "$95.000" },
     ],
     puntosRecaudo: [{ nombre: "NO", direccion: "" }],
-      
+
     personalAdicional: [
       {
         nombre: "NO",
@@ -234,15 +275,30 @@ const oficinasData = [
     administrador: "Claudia Vargas",
     pbx: "1112",
     telefono: "3243714326",
-    barrios: ["Bonilla Aragon", "Laureano Gomez", "Comuneros I", "Mojica", "Pilar Tairona", "Unidad Portal del Parque"],
+    barrios: [
+      "Bonilla Aragon",
+      "Laureano Gomez",
+      "Comuneros I",
+      "Mojica",
+      "Pilar Tairona",
+      "Unidad Portal del Parque",
+    ],
     planes: [
       { nombre: "50 megas", precio: "$40.000 Migracion de TV" },
       { nombre: "100 megas", precio: "$50.000" },
       { nombre: "300 megas", precio: "$70.000" },
       { nombre: "600 megas", precio: "$95.000" },
-    
     ],
-    puntosRecaudo: [{ nombre: "Drogueria Nuevo Latir", direccion: "- CR 28D 80 16" }, { nombre: "Servientrega Laureano Gomez", direccion: "- CL 32A 50 13" }, { nombre: "Efecty Mojica", direccion: "- CL 72z1 28e6 81" }, { nombre: "Punto de pago Bonilla", direccion: "- CL 92 28 11" }, { nombre: " Segundo Punto de pago Bonilla ", direccion: "- CR 26P5 87 67" }],
+    puntosRecaudo: [
+      { nombre: "Drogueria Nuevo Latir", direccion: "- CR 28D 80 16" },
+      { nombre: "Servientrega Laureano Gomez", direccion: "- CL 32A 50 13" },
+      { nombre: "Efecty Mojica", direccion: "- CL 72z1 28e6 81" },
+      { nombre: "Punto de pago Bonilla", direccion: "- CL 92 28 11" },
+      {
+        nombre: " Segundo Punto de pago Bonilla ",
+        direccion: "- CR 26P5 87 67",
+      },
+    ],
 
     personalAdicional: [
       {
@@ -257,7 +313,7 @@ const oficinasData = [
         pbx: "1116",
         telefono: "NO",
       },
-    ],  
+    ],
   },
   {
     nombre: "Oficina Marroquin",
@@ -272,9 +328,17 @@ const oficinasData = [
       { nombre: "100 megas", precio: "$50.000" },
       { nombre: "300 megas", precio: "$70.000" },
       { nombre: "600 megas", precio: "$95.000" },
-    
     ],
-    puntosRecaudo: [{ nombre: "Punto de pago Alirio Mora", direccion: "- CL 76 26B1 26" }, { nombre: "Miscelanea la 74", direccion: "- CR 75B 26A 28" }, { nombre: "Punto de pago Puertas del sol", direccion: "- CL 96A 26B1 101" }, { nombre: "Punto de pago Marroquin 2", direccion: "- CR 26G9 73 39" }, { nombre: "Punto de pago Marroquin 1", direccion: "- CR 25P5 87 67" }],
+    puntosRecaudo: [
+      { nombre: "Punto de pago Alirio Mora", direccion: "- CL 76 26B1 26" },
+      { nombre: "Miscelanea la 74", direccion: "- CR 75B 26A 28" },
+      {
+        nombre: "Punto de pago Puertas del sol",
+        direccion: "- CL 96A 26B1 101",
+      },
+      { nombre: "Punto de pago Marroquin 2", direccion: "- CR 26G9 73 39" },
+      { nombre: "Punto de pago Marroquin 1", direccion: "- CR 25P5 87 67" },
+    ],
 
     personalAdicional: [
       {
@@ -283,8 +347,7 @@ const oficinasData = [
         pbx: "1105",
         telefono: "3128655642",
       },
-      
-    ],  
+    ],
   },
   {
     nombre: "Oficina Chorros",
@@ -294,14 +357,24 @@ const oficinasData = [
     administrador: "Sharon Fuentes",
     pbx: "1110",
     telefono: "3182838808",
-    barrios: ["Mario Correa", "Chorros", "Louders", "Prados del Sur", "La marranera", "Golositos", "Alto Napoles"],
+    barrios: [
+      "Mario Correa",
+      "Chorros",
+      "Louders",
+      "Prados del Sur",
+      "La marranera",
+      "Golositos",
+      "Alto Napoles",
+    ],
     planes: [
       { nombre: "100 megas", precio: "$50.000" },
       { nombre: "300 megas", precio: "$70.000" },
       { nombre: "600 megas", precio: "$95.000" },
-    
     ],
-    puntosRecaudo: [{ nombre: "Sala de internet Marlin", direccion: "- CL 3C OESTE 90 15" }, { nombre: "Miscelanea Raquel", direccion: "- CR 94A 1 60" }],
+    puntosRecaudo: [
+      { nombre: "Sala de internet Marlin", direccion: "- CL 3C OESTE 90 15" },
+      { nombre: "Miscelanea Raquel", direccion: "- CR 94A 1 60" },
+    ],
 
     personalAdicional: [
       {
@@ -310,7 +383,7 @@ const oficinasData = [
         pbx: "",
         telefono: "",
       },
-    ],  
+    ],
   },
   {
     nombre: "Oficina Montebello",
@@ -325,9 +398,12 @@ const oficinasData = [
       { nombre: "100 megas", precio: "$50.000" },
       { nombre: "300 megas", precio: "$70.000" },
       { nombre: "600 megas", precio: "$95.000" },
-    
     ],
-    puntosRecaudo: [{ nombre: "Tienda Kary", direccion: "- AV 47 OESTE 9A 112" }, { nombre: "Tienda Luz Mery", direccion: "- CL 4 OESTE 43A 07" }, { nombre: "Parasol Rojo", direccion: "- CL 12 OESTE 36 42" }],
+    puntosRecaudo: [
+      { nombre: "Tienda Kary", direccion: "- AV 47 OESTE 9A 112" },
+      { nombre: "Tienda Luz Mery", direccion: "- CL 4 OESTE 43A 07" },
+      { nombre: "Parasol Rojo", direccion: "- CL 12 OESTE 36 42" },
+    ],
 
     personalAdicional: [
       {
@@ -336,7 +412,7 @@ const oficinasData = [
         pbx: "",
         telefono: "",
       },
-    ],  
+    ],
   },
   {
     nombre: "Oficina Siloe",
@@ -351,7 +427,28 @@ const oficinasData = [
       { nombre: "20 megas", precio: "$60.000" },
       { nombre: "TV", precio: "$30.000" },
     ],
-    puntosRecaudo: [{ nombre: "Punto de recuado Oliva vivas", direccion: "- CL 10 OESTE 50G 27" }, { nombre: "Punto de recuado Maitte Silva", direccion: "- CL 10 OESTE 49C 40" }, { nombre: "Punto de recuado Eimmy muñoz", direccion: "- CL 10 OESTE 50 53" }, { nombre: "Punto de recuado Monica Valencia", direccion: "- CL 14 OESTE 48 68" }, { nombre: "Punto de recuado Geidy Martinez", direccion: "- CL 13 531 42" }],
+    puntosRecaudo: [
+      {
+        nombre: "Punto de recuado Oliva vivas",
+        direccion: "- CL 10 OESTE 50G 27",
+      },
+      {
+        nombre: "Punto de recuado Maitte Silva",
+        direccion: "- CL 10 OESTE 49C 40",
+      },
+      {
+        nombre: "Punto de recuado Eimmy muñoz",
+        direccion: "- CL 10 OESTE 50 53",
+      },
+      {
+        nombre: "Punto de recuado Monica Valencia",
+        direccion: "- CL 14 OESTE 48 68",
+      },
+      {
+        nombre: "Punto de recuado Geidy Martinez",
+        direccion: "- CL 13 531 42",
+      },
+    ],
 
     personalAdicional: [
       {
@@ -360,10 +457,310 @@ const oficinasData = [
         pbx: "",
         telefono: "",
       },
-    ],  
+    ],
   },
-  
-  
+  {
+    nombre: "Oficina Cerrito",
+    direccion: "CL 6 6 50 - La Estrella ",
+    ciudad: "Cerrito",
+    departamento: "Valle del cauca",
+    administrador: "Angelica Hurtado Silva",
+    pbx: "1211",
+    telefono: "3215931208",
+    barrios: [
+      "Nuevo Municipio(HFC)",
+      "Nuevo Amanecer(HFC)",
+      "El Saman(HFC)",
+      "Villa Lina(HFC)",
+      "Porvenir(HFC)",
+      "La Paz (HFC)",
+      "Coincer(HFC)",
+      "Los Samanes(HFC)",
+      "Villa Del Carmen(HFC)",
+      "Asovicons(HFC)",
+      "Rincones(HFC)",
+      "La Esperanza(HFC)",
+      "Pueblito Valluno(HFC)",
+      "Prado Valle(HFC)",
+      "Las Orquideas(HFC)",
+      "Buenos Aires(GPON)",
+      "Cincuentenario(GPON)",
+      "Lares Del Paraiso(GPON)",
+      "La Estrella(GPON)",
+      "San Rafael(GPON)",
+      "Chapinero(SOLO TV)",
+      "Santa Barbara(SOLO TV)",
+    ],
+    planes: [
+      { nombre: "TV + NET 50 MB", precio: "" },
+      { nombre: "TV + NET 100 MB", precio: "" },
+      { nombre: "TV + NET 200 MB", precio: "" },
+      { nombre: "TV + NET 300 MB", precio: "" },
+      { nombre: "TV + NET 20 MB HFC", precio: "" },
+    ],
+    puntosRecaudo: [
+      {
+        nombre: "Punto de recuado Jose Rodrigo Garcia",
+        direccion: "- CL 9 13 65",
+      },
+    ],
+
+    personalAdicional: [
+      {
+        nombre: "NO",
+        cargo: "NO",
+        pbx: "",
+        telefono: "",
+      },
+    ],
+  },
+  {
+    nombre: "Oficina Andalucia",
+    direccion: "CL 12 5 49 - Centro",
+    ciudad: "Andalucia",
+    departamento: "Valle del cauca",
+    administrador: "Diana Cruz Marmolejo",
+    pbx: "1215",
+    telefono: "3154106483",
+    barrios: [
+      "Alianza",
+      "Altamira",
+      "Centenario",
+      "Centro",
+      "Colinas",
+      "Estacion",
+      "Floresta 1",
+      "Floresta 2",
+      "Paraiso",
+      "Reubicacion",
+      "Sol y luna",
+      "Retorno",
+    ],
+    planes: [
+      { nombre: "20 megas", precio: "$40.000" },
+      { nombre: "TV", precio: "$30.000" },
+    ],
+    puntosRecaudo: [{ nombre: "NO", direccion: "" }],
+
+    personalAdicional: [
+      {
+        nombre: "NO",
+        cargo: "NO",
+        pbx: "",
+        telefono: "",
+      },
+    ],
+  },
+  {
+    nombre: "Oficina Tulua",
+    direccion: "TVSAL 12 25B 56 - Bolivar ",
+    ciudad: "Tulua",
+    departamento: "Valle del cauca",
+    administrador: "Maria del Carmen Morales ",
+    pbx: "1207",
+    telefono: "3169621818 - 3169043288",
+    barrios: [
+      "Saman (TV HFC)",
+      "Portales del rio (TV HFC)",
+      "Alameda 1 (TV HFC)",
+      "Alameda 2 (TV HFC)",
+      "Palmar (TV HFC)",
+      "Internacional (TV HFC)",
+      "Villa colombia (TV HFC)",
+      "Municipal (TV HFC)",
+      "Bosquesito (TV HFC)",
+      "Jorge eliecer gaitan (TV HFC)",
+      "Chimangos (TV HFC)",
+      "Bello horizonte (TV HFC)",
+      "Refugio (TV HFC)",
+      "Diablos rojos (TV HFC)",
+      "Flor de la campana (TV HFC)",
+      "La esperanza (TV HFC)",
+      "Las delicias (TV HFC)",
+      "La ceiba (TV HFC)",
+      "Rojas (TV HFC)",
+      "Ruben cruz (TV HFC)",
+      "Los olmos (TV HFC)",
+      "Playas (TV HFC)",
+      "Graciela (TV HFC)",
+      "El jardin (TV HFC)",
+      "Maracaibo (TV HFC)",
+      "Siete de agosto (TV HFC)",
+      "Sintra sancarlos (TV HFC)",
+      "Portales de rio paila (TV HFC)",
+      "Santa ines (TV HFC)",
+      "Guayacanes (TV HFC)",
+      "San luis (TV HFC)",
+      "Estambul (TV HFC)",
+      "Farfan (TV HFC)",
+      "Nuevo farfan (TV HFC)",
+      "Asoagrin (TV HFC)",
+      "Limonar (TV HFC)",
+      "San arino (TV HFC)",
+      "Laures 1 (TV HFC)",
+      "Laureles 2 (TV HFC)",
+      "Villa del lago (TV HFC)",
+      "La nieves (TV HFC)",
+      "Veraneras (TV HFC)",
+      "Popular (TV HFC)",
+      "Villanueva (TV HFC)",
+      "Santarita et2 (TV HFC)",
+      "Moralito (TV HFC)",
+      "Bosque de maracaibo (NET + TV HFC)",
+      "Tercer milenio (NET + TV HFC)",
+      "El bosque (NET + TV HFC)",
+      "La cruz (NET + TV HFC)",
+      "Av cali (NET + TV HFC)",
+      "Salecianos (NET + TV HFC)",
+      "La bastilla (NET + TV HFC)",
+    ],
+    planes: [
+      { nombre: "20 megas", precio: "$40.000" },
+      { nombre: "TV", precio: "$30.000" },
+    ],
+    puntosRecaudo: [
+      { nombre: "Punto de pago Diego Cell", direccion: "CL 13 49 20" },
+      { nombre: "Carlos Evandro Vanegas", direccion: "CL 12 A 28B 72" },
+    ],
+
+    personalAdicional: [
+      {
+        nombre: "NO",
+        cargo: "NO",
+        pbx: "",
+        telefono: "",
+      },
+    ],
+  },
+  {
+    nombre: "Oficina Tarqui",
+    direccion: "CL 3 5 61 LOCAL 2 - Antonio Ricaute",
+    ciudad: "Tarqui",
+    departamento: "Valle del cauca",
+    administrador: "Claudia Patricia Jaramillo Montoya",
+    pbx: "1104",
+    telefono: "3204564217",
+    barrios: [
+      "Villas del canadá (TV HFC)",
+      "Manuel de jesús (TV HFC)",
+      "Villa magdalena (TV HFC)",
+      "San antonio (TV HFC)",
+      "Villa del rio (TV HFC)",
+      "Antonio ricaute (TV HFC)",
+      "Centro (TV HFC)",
+      "La veguita (TV HFC)",
+      "Vereda san joaquín (TV HFC)",
+      "La loma (TV HFC)",
+      "La bodega (TV HFC)",
+      "Villa aurora (TV HFC)",
+      "Ciudadela otoniel rojas correa (TV HFC)",
+      "Hato nuevo (TV HFC)",
+      "Minuto de dios (TV HFC)",
+      "Portal del sur (TV HFC)",
+      "Portal del sur 2da etapa (TV HFC)",
+      "El estadio (TV HFC)",
+      "El jardín (TV HFC)",
+      "Circunvalar (TV HFC)",
+      "Las brisas (TV HFC)",
+      "Las brisas 2da etapa (TV HFC)",
+      "Llano del hato o san josé obrero (TV HFC)",
+      "Circunvalar (TV HFC)",
+      "San joaquin (TV HFC)",
+      "Villas del canada (NET + TV HFC)",
+      "Antonio ricaute (NET + TV HFC)",
+      "Las brisas (NET + TV HFC)",
+      "Centro (NET + TV HFC)",
+      "La loma (NET + TV HFC)",
+      "Villa aurora (NET + TV HFC)",
+      "Hato nuevo (NET + TV HFC)",
+      "Minuto de dios (NET + TV HFC)",
+      "Portal del sur 2 etapa (NET + TV HFC)",
+    ],
+    planes: [
+      { nombre: "20 megas", precio: "$50.000" },
+      { nombre: "TV", precio: "$30.000" },
+    ],
+    puntosRecaudo: [{ nombre: "NO", direccion: "NO" }],
+
+    personalAdicional: [
+      {
+        nombre: "NO",
+        cargo: "NO",
+        pbx: "",
+        telefono: "",
+      },
+    ],
+  },
+  {
+    nombre: "Oficina Florida",
+    direccion: "CL 9 16 74 - Florida",
+    ciudad: "Florida",
+    departamento: "Valle del cauca",
+    administrador: "Maylhen Melo",
+    pbx: "1107",
+    telefono: "3188139581",
+    barrios: ["Florida"],
+    planes: [
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
+    ],
+    puntosRecaudo: [
+      {
+        nombre: "Tu amigo comunicaciones", direccion: "- CL 10 12 33 San antonio"},
+      { nombre: "Aqui es eliza irleym", direccion: "- CR 13 7 37 La cabaña" },
+      { nombre: "Miscelanea@tramites", direccion: "- CL 9 21 44 La esperanza" },
+      { nombre: "Multiservicios", direccion: "- CR 14 5 04 La cabaña" },
+      { nombre: "Variedades pao", direccion: "- CR 20 13 34 San jorge" },
+      { nombre: "Autoservicio ja en la 10", direccion: "- CL 10 3 64" },
+      { nombre: "Tienda llanito", direccion: "- Llanito" },
+    ],
+
+    personalAdicional: [
+      {
+        nombre: "Lizeth Johanna",
+        cargo: "Caja",
+        pbx: "1118",
+        telefono: "NO",
+      },
+      {
+        nombre: "Sebastian Prada",
+        cargo: "Retencion-Cartera",
+        pbx: "1114",
+        telefono: "NO",
+      },
+    ],
+  },
+  {
+    nombre: "Oficina Pradera",
+    direccion: "CL 6 11 25 - Centro",
+    ciudad: "Pradera",
+    departamento: "Valle del cauca",
+    administrador: "Mayra Alejandra Rivera",
+    pbx: "1220",
+    telefono: "3218117199",
+    barrios: ["Pradera"],
+    planes: [
+      { nombre: "100 megas", precio: "$50.000" },
+      { nombre: "300 megas", precio: "$70.000" },
+      { nombre: "600 megas", precio: "$95.000" },
+    ],
+    puntosRecaudo: [
+      {
+        nombre: "Papeleria Panda", direccion: "- MZ C CS 1 La Lorena"},
+      { nombre: "Aqui es eliza irleym", direccion: "- CL 10 8 48 San Roque " },
+      { nombre: "Interrapidisimo - Multiservicios", direccion: "- CL 8 13 53 Ant. Ricaute" },
+    ],
+
+    personalAdicional: [
+      {
+        nombre: "Jackeline Rondon",
+        cargo: "Caja",
+        pbx: "1108",
+        telefono: "NO",
+      },
+    ],
+  },
 ];
 
 // ==========================
