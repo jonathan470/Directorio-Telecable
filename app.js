@@ -3,7 +3,7 @@
 // ==========================
 const credencialesValidas = [
   { email: "soporte.riocauca@cablecauca.com", password: "admin123" },
-  { email: "soporte@telecable.com", password: "soporte456" },
+  { email: "asistente.subgerencia@cablecauca.com", password: "subgerencia123" },
 ];
 
 // ==========================
@@ -16,6 +16,7 @@ function cargarVista(ruta) {
       document.getElementById("app-content").innerHTML = html;
       if (ruta === "oficinas") renderOficinas();
       if (ruta === "views-oficinas") renderVistaOficina();
+      if (ruta === "extensiones") renderExtensiones();
     })
     .catch((err) => {
       document.getElementById("app-content").innerHTML =
@@ -137,7 +138,7 @@ const oficinasData = [
     ],
   },
   {
-    nombre: "Oficina Villa nueva",
+    nombre: "Oficina Villa Nueva",
     direccion: "CL 50 28G 68 - 12 de Octubre",
     ciudad: "Cali",
     departamento: "Valle del cauca",
@@ -519,7 +520,7 @@ const oficinasData = [
     direccion: "CL 12 5 49 - Centro",
     ciudad: "Andalucia",
     departamento: "Valle del cauca",
-    administrador: "Diana Cruz Marmolejo",
+    administrador: "Maria José Arias Hernández Acevedo",
     pbx: "1215",
     telefono: "3154106483",
     barrios: [
@@ -680,7 +681,7 @@ const oficinasData = [
       { nombre: "20 megas", precio: "$50.000" },
       { nombre: "TV", precio: "$30.000" },
     ],
-    puntosRecaudo: [{ nombre: "NO", direccion: "NO" }],
+    puntosRecaudo: [{ nombre: "NO", direccion: "" }],
 
     personalAdicional: [
       {
@@ -707,7 +708,9 @@ const oficinasData = [
     ],
     puntosRecaudo: [
       {
-        nombre: "Tu amigo comunicaciones", direccion: "- CL 10 12 33 San antonio"},
+        nombre: "Tu amigo comunicaciones",
+        direccion: "- CL 10 12 33 San antonio",
+      },
       { nombre: "Aqui es eliza irleym", direccion: "- CR 13 7 37 La cabaña" },
       { nombre: "Miscelanea@tramites", direccion: "- CL 9 21 44 La esperanza" },
       { nombre: "Multiservicios", direccion: "- CR 14 5 04 La cabaña" },
@@ -747,9 +750,14 @@ const oficinasData = [
     ],
     puntosRecaudo: [
       {
-        nombre: "Papeleria Panda", direccion: "- MZ C CS 1 La Lorena"},
+        nombre: "Papeleria Panda",
+        direccion: "- MZ C CS 1 La Lorena",
+      },
       { nombre: "Aqui es eliza irleym", direccion: "- CL 10 8 48 San Roque " },
-      { nombre: "Interrapidisimo - Multiservicios", direccion: "- CL 8 13 53 Ant. Ricaute" },
+      {
+        nombre: "Interrapidisimo - Multiservicios",
+        direccion: "- CL 8 13 53 Ant. Ricaute",
+      },
     ],
 
     personalAdicional: [
@@ -801,72 +809,298 @@ function renderOficinas() {
 // Renderizar vista detallada
 // ==========================
 function renderVistaOficina() {
-  const section = document.getElementById("oficinas-section");
-  if (!section) return;
-
   const oficina = JSON.parse(localStorage.getItem("oficinaSeleccionada"));
-  if (!oficina) {
-    section.innerHTML = "<p>No se encontró información de la oficina.</p>";
-    return;
+  if (!oficina) return;
+
+  // Nombre de la oficina
+  const nombreOficina = document.getElementById("nombre-oficina");
+  if (nombreOficina) {
+    nombreOficina.textContent = oficina.nombre;
   }
 
-  section.innerHTML = `
-    <div class="vista-oficina">
-      <a href="#oficinas">← Volver a Oficinas</a>
-      <h1>${oficina.nombre}</h1>
+  // Información general
+  const infoGeneral = document.getElementById("info-general");
+  if (infoGeneral) {
+    infoGeneral.innerHTML = `
+      <p><strong>Administrador:</strong> ${oficina.administrador}</p>
+      <p><strong>PBX:</strong> ${oficina.pbx}</p>
+      <p><strong>Teléfono:</strong> ${oficina.telefono}</p>
+      <p><strong>Dirección:</strong> ${oficina.direccion}</p>
+      <p><strong>Ciudad:</strong> ${oficina.ciudad}</p>
+      <p><strong>Departamento:</strong> ${oficina.departamento}</p>
+      <p><strong>Barrios:</strong> ${oficina.barrios.join(", ")}</p>
+    `;
+  }
 
-      <h2>Información General</h2>
-      <ul>
-        <li><strong>Administradora:</strong> ${oficina.administrador}</li>
-        <li><strong>Extensión PBX:</strong> ${oficina.pbx}</li>
-        <li><strong>Teléfono Principal:</strong> ${oficina.telefono}</li>
-        <li><strong>Dirección:</strong> ${oficina.direccion}</li>
-        <li><strong>Ciudad:</strong> ${oficina.ciudad}</li>
-        <li><strong>Departamento:</strong> ${oficina.departamento}</li>
-      </ul>
+  // Planes
+  const infoPlan = document.getElementById("info-plan");
+  if (infoPlan) {
+    infoPlan.innerHTML = oficina.planes
+      .map((plan) => `<p>${plan.nombre}: ${plan.precio}</p>`)
+      .join("");
+  }
 
-      <h2>Barrios que competen</h2>
-      <ul>
-        ${oficina.barrios.map((b) => `<li>${b}</li>`).join("")}
-      </ul>
+  // Puntos de recaudo
+  const infoPuntos = document.getElementById("info-puntos");
+  if (infoPuntos) {
+    infoPuntos.innerHTML = oficina.puntosRecaudo
+      .map((punto) => `<p>${punto.nombre} ${punto.direccion}</p>`)
+      .join("");
+  }
 
-      <h2>Planes Disponibles</h2>
-      <ul>
-        ${oficina.planes
-          .map((p) => `<li>${p.nombre}: ${p.precio}</li>`)
-          .join("")}
-      </ul>
+  // Información adicional
+  const infoAdicional = document.getElementById("info-adicional");
+  if (infoAdicional) {
+    infoAdicional.innerHTML = oficina.personalAdicional
+      .map((persona) => {
+        return `
+          <div class="persona-adicional">
+            <p><strong>Nombre:</strong> ${persona.nombre}</p>
+            <p><strong>Cargo:</strong> ${persona.cargo}</p>
+            ${persona.pbx ? `<p><strong>PBX:</strong> ${persona.pbx}</p>` : ""}
+            ${
+              persona.telefono
+                ? `<p><strong>Teléfono:</strong> ${persona.telefono}</p>`
+                : ""
+            }
+          </div>
+        `;
+      })
+      .join("");
+  }
+}
+// ==========================
+// Datos simulados de extensiones
+// ==========================
 
-      <h2>Puntos de Recaudo</h2>
-      <ul>
-        ${oficina.puntosRecaudo
-          .map((p) => `<li>${p.nombre} ${p.direccion}</li>`)
-          .join("")}
-      </ul>
+const pbxData = [
+  {
+    nombre_personal: "Erika Rivas",
+    cargo: "Administrador Oficina Ceibas",
+    extension: "1125",
+  },
+  {
+    nombre_personal: "Sandra Balanta",
+    cargo: "Administrador Oficina Mariano Ramos",
+    extension: "1221",
+  },
+  {
+    nombre_personal: "Diana Carolina Dorado Guauña",
+    cargo: "Administrador Oficina Villa Nueva",
+    extension: "1117",
+  },
+  {
+    nombre_personal: "Maria Eugenia Diaz",
+    cargo: "Administrador Oficina Poblado",
+    extension: "1135",
+  },
+  {
+    nombre_personal: "Alejandra Giraldo",
+    cargo: "Administrador Oficina Rio Cauca",
+    extension: "1127",
+  },
+  {
+    nombre_personal: "Vanessa Villegas G",
+    cargo: "Administrador Oficina Cordoba Reservado",
+    extension: "1130",
+  },
 
-      <h2>Información Adicional</h2>
-      <ul>
-        ${oficina.personalAdicional
-          .map(
-            (p) => `
-          <li>
-            <strong>Nombre:</strong> ${p.nombre} <br>
-            <strong>Cargo:</strong> ${p.cargo} <br>
-            ${p.pbx ? `<strong>PBX:</strong> ${p.pbx}<br>` : ""}
-            ${p.telefono ? `<strong>Teléfono:</strong> ${p.telefono}` : ""}
-          </li>
-        `
-          )
-          .join("<br><br>")}
-      </ul>
-    </div>
-  `;
+  {
+    nombre_personal: "Claudia Vargas",
+    cargo: "Administrador Oficina Comuneros",
+    extension: "1112",
+  },
+  {
+    nombre_personal: "Brush Zapata",
+    cargo: "Retencion Comuneros",
+    extension: "1212",
+  },
+  {
+    nombre_personal: "Ana Yibe Fontal",
+    cargo: "Caja Comuneros",
+    extension: "1116",
+  },
+
+  {
+    nombre_personal: "Leidy Johana Ospina",
+    cargo: "Administrador Oficina Marroquin",
+    extension: "1136",
+  },
+  {
+    nombre_personal: "Maira Hernandez",
+    cargo: "Retencion y Caja Marroquin",
+    extension: "1105",
+  },
+
+  {
+    nombre_personal: "Sharon Fuentes",
+    cargo: "Administrador Oficina Chorros",
+    extension: "1110",
+  },
+  {
+    nombre_personal: "Jhoiner Arturo Barbosa Otalvaro",
+    cargo: "Administrador Oficina Montebello",
+    extension: "1211",
+  },
+  {
+    nombre_personal: "Yulisa Ocoro Betancurth",
+    cargo: "Administrador Oficina Siloe",
+    extension: "1111",
+  },
+  {
+    nombre_personal: "Angelica Hurtado Silva",
+    cargo: "Administrador Oficina Cerrito",
+    extension: "1211",
+  },
+  {
+    nombre_personal: "Maria José Arias Hernández Acevedo",
+    cargo: "Administrador Oficina Andalucia",
+    extension: "1215",
+  },
+  {
+    nombre_personal: "Maria del Carmen Morales",
+    cargo: "Administrador Oficina Tulua",
+    extension: "1207",
+  },
+  {
+    nombre_personal: "Claudia Patricia Jaramillo Montoya",
+    cargo: "Administrador Oficina Tarqui",
+    extension: "1104",
+  },
+
+  {
+    nombre_personal: "Maylhen Melo",
+    cargo: "Administrador Oficina Florida",
+    extension: "1107",
+  },
+  {
+    nombre_personal: "Lizeth Johanna",
+    cargo: "Retencion Florida",
+    extension: "1118",
+  },
+  { 
+    nombre_personal: "Sebastian Prada",
+    cargo: "Cartera Florida y Oficinas fuera de cali",
+    extension: "1114",
+  },
+
+  {
+    nombre_personal: "Mayra Alejandra Rivera",
+    cargo: "Administrador Oficina Pradera",
+    extension: "1220",
+  },
+  {
+    nombre_personal: "Jackeline Rondon",
+    cargo: "Caja Pradera",
+    extension: "1108",
+  },
+  {
+    nombre_personal: "Nasly Johanna Hernández",
+    cargo: "Subgerencia",
+    extension: "1102",
+  },
+  {
+    nombre_personal: "Valentina Tamayo Ortega",
+    cargo: "Asistente de gerencia",
+    extension: "1204",
+  },
+  {
+    nombre_personal: "Katherine Muñoz",
+    cargo: "Recursos Humanos",
+    extension: "1217",
+  },
+  {
+    nombre_personal: "Anyela Viera",
+    cargo: "Almacén - Sistemas",
+    extension: "1133",
+  },
+  {
+    nombre_personal: "David Solano",
+    cargo: "Proyectos",
+    extension: "1126",
+  },
+  {
+    nombre_personal: "Carlos Bejarano",
+    cargo: "Portería",
+    extension: "1120",
+  },
+  {
+    nombre_personal: "Karina Mariño",
+    cargo: "Jefe Cartera",
+    extension: "1201",
+  },
+  {
+    nombre_personal: "Valeria Varona",
+    cargo: "Auxiliar Cartera",
+    extension: "1101",
+  },
+  {
+    nombre_personal: "Luna Mora",
+    cargo: "Auxiliar Cartera",
+    extension: "1203",
+  },
+  {
+    nombre_personal: "Natalia Valencia",
+    cargo: "Contabilidad Telecable",
+    extension: "1103",
+  },
+  {
+    nombre_personal: "Monica Marcela Albaran Castaño",
+    cargo: "Contabilidad Home tv",
+    extension: "1218",
+  },
+  {
+    nombre_personal: "Eliana Erazo",
+    cargo: "Contabilidad Telecable",
+    extension: "1100",
+  },
+  {
+    nombre_personal: "Lina Marcela",
+    cargo: "Contabilidad Cable Cauca",
+    extension: "1100",
+  },
+  {
+    nombre_personal: "Pedro Felipe Lopez",
+    cargo: "Sistemas - Administrativo",
+    extension: "1124",
+  },
+  {
+    nombre_personal: "Sergio Gomez",
+    cargo: "Sistemas - Call Center",
+    extension: "1119",
+  },
+  {
+    nombre_personal: "Jerson Brand",
+    cargo: "Sistemas - Call Center",
+    extension: "1301",
+  },
+  {
+    nombre_personal: "Alejandro Rios",
+    cargo: "Sistemas - Call Center",
+    extension: "1132",
+  },
+];
+
+// ==========================
+// Renderizar tabla de extensiones
+// ==========================
+
+function renderExtensiones() {
+  const tbody = document.getElementById("pbx-tbody");
+  if (!tbody) return;
+
+  tbody.innerHTML = "";
+  pbxData.forEach((extension) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${extension.nombre_personal}</td>
+      <td>${extension.cargo}</td>
+      <td>${extension.extension}</td>
+    `;
+    tbody.appendChild(tr);
+  });
 }
 
 // ==========================
 // Función para cerrar sesión
 // ==========================
-function cerrarSesion() {
-  localStorage.removeItem("usuarioAutenticado");
-  window.location.href = "../login.html";
-}
