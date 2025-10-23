@@ -737,6 +737,12 @@ const oficinasData = [
         pbx: "NO",
         telefono: "NO",
       },
+      {
+        nombre: "Sebastian Prada",
+        cargo: "Cartera",
+        pbx: "1114",
+        telefono: "NO",
+      },
     ],
   },
   {
