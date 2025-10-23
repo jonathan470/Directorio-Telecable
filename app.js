@@ -8,6 +8,7 @@ const credencialesValidas = [
   { email: "sistemas5@cablecauca.com", password: "sistemas5*" },
   { email: "sistemas.general@cablecauca.com", password: "sistemasgeneral123" },
   { email: "asistente.subgerencia@cablecauca.com", password: "subgerencia123" },
+  { email: "sistemas@cablecauca.com", password: "sistemas123*" },
 ];
 
 // ==========================
@@ -726,14 +727,14 @@ const oficinasData = [
     personalAdicional: [
       {
         nombre: "Lizeth Johanna",
-        cargo: "Caja",
+        cargo: "Retencion",
         pbx: "1118",
         telefono: "NO",
       },
       {
-        nombre: "Sebastian Prada",
-        cargo: "Retencion-Cartera",
-        pbx: "1114",
+        nombre: "Cintya Cuaran",
+        cargo: "Caja",
+        pbx: "NO",
         telefono: "NO",
       },
     ],
