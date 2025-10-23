@@ -3,6 +3,10 @@
 // ==========================
 const credencialesValidas = [
   { email: "soporte.riocauca@cablecauca.com", password: "admin123" },
+  { email: "sistemas1@cablecauca.com", password: "sistemas1*" },
+  { email: "sistemas2@cablecauca.com", password: "sistemas2*" },
+  { email: "sistemas5@cablecauca.com", password: "sistemas5*" },
+  { email: "sistemas.general@cablecauca.com", password: "sistemasgeneral123" },
   { email: "asistente.subgerencia@cablecauca.com", password: "subgerencia123" },
 ];
 
@@ -420,7 +424,7 @@ const oficinasData = [
     direccion: "CL 1 OESTE 52 370 - Belizario Siloe ",
     ciudad: "Cali",
     departamento: "Valle del cauca",
-    administrador: "Yulisa Ocoro Betancurth",
+    administrador: "Alejandro Rios",
     pbx: "1111",
     telefono: "3188073456",
     barrios: ["Siloe"],
@@ -783,6 +787,7 @@ function renderOficinas() {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${oficina.nombre}</td>
+      <td>${oficina.pbx}</td>
       <td>${oficina.direccion}</td>
       <td>${oficina.administrador}</td>
       <td>
@@ -1075,7 +1080,7 @@ const pbxData = [
     extension: "1301",
   },
   {
-    nombre_personal: "Alejandro Rios",
+    nombre_personal: "Sandra Patricia Escobar",
     cargo: "Sistemas - Call Center",
     extension: "1132",
   },
