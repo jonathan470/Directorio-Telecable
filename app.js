@@ -955,7 +955,7 @@ const pbxData = [
     extension: "1211",
   },
   {
-    nombre_personal: "Yulisa Ocoro Betancurth",
+    nombre_personal: "Alejandro Rios",
     cargo: "Administrador Oficina Siloe",
     extension: "1111",
   },
