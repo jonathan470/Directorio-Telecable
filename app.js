@@ -422,7 +422,7 @@ const oficinasData = [
   },
   {
     nombre: "Oficina Siloe",
-    direccion: "CL 1 OESTE 52 370 - Belizario Siloe ",
+    direccion: "CL 1 OESTE 52 370 - Belisario Siloe ",
     ciudad: "Cali",
     departamento: "Valle del cauca",
     administrador: "Alejandro Rios",
