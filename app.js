@@ -789,32 +789,77 @@ function renderOficinas() {
   const tbody = document.getElementById("oficinas-tbody");
   if (!tbody) return;
 
-  tbody.innerHTML = "";
-  oficinasData.forEach((oficina, index) => {
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
+  // Render basado en un array (permite pasar versiones filtradas)
+  function renderList(list) {
+    tbody.innerHTML = "";
+    list.forEach((oficina, index) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
       <td>${oficina.nombre}</td>
       <td>${oficina.pbx}</td>
       <td>${oficina.direccion}</td>
       <td>${oficina.administrador}</td>
       <td>
-        <button class="view-button" data-index="${index}"> Views </button>
+        <button class="view-button" data-index="${oficinasData.indexOf(oficina)}"> Views </button>
       </td>
     `;
-    tbody.appendChild(tr);
-  });
-
-  document.querySelectorAll(".view-button").forEach((button) => {
-    button.addEventListener("click", (e) => {
-      const index = e.target.dataset.index;
-      const oficinaSeleccionada = oficinasData[index];
-      localStorage.setItem(
-        "oficinaSeleccionada",
-        JSON.stringify(oficinaSeleccionada)
-      );
-      location.hash = "views-oficinas";
+      tbody.appendChild(tr);
     });
-  });
+
+    // Attach view listeners
+    document.querySelectorAll(".view-button").forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const index = e.target.dataset.index;
+        const oficinaSeleccionada = oficinasData[index];
+        localStorage.setItem(
+          "oficinaSeleccionada",
+          JSON.stringify(oficinaSeleccionada)
+        );
+        location.hash = "views-oficinas";
+      });
+    });
+  }
+
+  // Función que filtra por texto y ciudad
+  function filterAndRender() {
+    const text = (document.getElementById("filter-input")?.value || "").toLowerCase().trim();
+    const citySelect = document.getElementById("filter-city");
+    const city = (citySelect?.value || "Todos").toLowerCase();
+
+    let filtered = oficinasData.filter((o) => {
+      const matchesText =
+        !text ||
+        o.nombre.toLowerCase().includes(text) ||
+        o.direccion.toLowerCase().includes(text) ||
+        (o.administrador || "").toLowerCase().includes(text) ||
+        (o.pbx || "").toLowerCase().includes(text);
+
+      const matchesCity = city === "todos" || city === "" || (o.ciudad || "").toLowerCase() === city;
+
+      return matchesText && matchesCity;
+    });
+
+    renderList(filtered);
+  }
+
+  // Inicial render
+  renderList(oficinasData);
+
+  // Añadir listeners a inputs de filtro (si existen)
+  const filterInput = document.getElementById("filter-input");
+  const filterCity = document.getElementById("filter-city");
+
+  if (filterInput) {
+    filterInput.addEventListener("input", () => {
+      filterAndRender();
+    });
+  }
+
+  if (filterCity) {
+    filterCity.addEventListener("change", () => {
+      filterAndRender();
+    });
+  }
 }
 
 // ==========================
