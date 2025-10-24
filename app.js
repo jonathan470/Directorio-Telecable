@@ -22,6 +22,8 @@ function cargarVista(ruta) {
       if (ruta === "oficinas") renderOficinas();
       if (ruta === "views-oficinas") renderVistaOficina();
       if (ruta === "extensiones") renderExtensiones();
+      if (ruta === "desarrollos") renderDesarrollos();
+      if (ruta === "views-desarrollos") renderVistaDesarrollo();
     })
     .catch((err) => {
       document.getElementById("app-content").innerHTML =
@@ -704,7 +706,7 @@ const oficinasData = [
     departamento: "Valle del cauca",
     administrador: "Maylhen Melo",
     pbx: "1107",
-    telefono: "3188139581",
+    telefono: "3188139581-3207591526",
     barrios: ["Florida"],
     planes: [
       { nombre: "100 megas", precio: "$50.000" },
@@ -800,7 +802,9 @@ function renderOficinas() {
       <td>${oficina.direccion}</td>
       <td>${oficina.administrador}</td>
       <td>
-        <button class="view-button" data-index="${oficinasData.indexOf(oficina)}"> Views </button>
+        <button class="view-button" data-index="${oficinasData.indexOf(
+          oficina
+        )}"> Views </button>
       </td>
     `;
       tbody.appendChild(tr);
@@ -822,7 +826,9 @@ function renderOficinas() {
 
   // Función que filtra por texto y ciudad
   function filterAndRender() {
-    const text = (document.getElementById("filter-input")?.value || "").toLowerCase().trim();
+    const text = (document.getElementById("filter-input")?.value || "")
+      .toLowerCase()
+      .trim();
     const citySelect = document.getElementById("filter-city");
     const city = (citySelect?.value || "Todos").toLowerCase();
 
@@ -834,7 +840,10 @@ function renderOficinas() {
         (o.administrador || "").toLowerCase().includes(text) ||
         (o.pbx || "").toLowerCase().includes(text);
 
-      const matchesCity = city === "todos" || city === "" || (o.ciudad || "").toLowerCase() === city;
+      const matchesCity =
+        city === "todos" ||
+        city === "" ||
+        (o.ciudad || "").toLowerCase() === city;
 
       return matchesText && matchesCity;
     });
@@ -1035,7 +1044,7 @@ const pbxData = [
     cargo: "Retencion Florida",
     extension: "1118",
   },
-  { 
+  {
     nombre_personal: "Sebastian Prada",
     cargo: "Cartera Florida y Oficinas fuera de cali",
     extension: "1114",
@@ -1156,6 +1165,162 @@ function renderExtensiones() {
     `;
     tbody.appendChild(tr);
   });
+}
+// ==========================
+// Datos simulados de desarrollos
+// ==========================
+
+const desarrollosData = [
+  {
+    nombre_desarrollo: "Desarrollo Andres Sanin",
+    direccion_desarrollo: "CR 14 74 04 - Andres Sanin",
+    ciudad_desarrollo: "Cali",
+    departamento_desarrollo: "Valle del cauca",
+    Encargado_desarrollo: "Jhon Breyman Loboa Villaquiran",
+    telefono_desarrollo: "3153238184",
+    barrios_desarrollo: ["Andres Sanin", "Puerto Mallarino"],
+    planes_desarrollo: [
+      { nombre_plan: "100 Megas", precio_plan: "75.000" },
+      { nombre_plan: "200 Megas", precio_plan: "85.000" },
+    ],
+    correo_desarrollo: "telecableandressanin@gmail.com",
+  },
+  {
+    nombre_desarrollo: "Desarrollo Ciudad del Campo",
+    direccion_desarrollo: "CL 103 16 122 LOCAL 1 - Ciudad del Campo",
+    ciudad_desarrollo: "Cali",  
+    departamento_desarrollo: "Valle del cauca",
+    Encargado_desarrollo: "Jennifer Cerezo",
+    telefono_desarrollo: "3172964236",
+    barrios_desarrollo: ["Ciudad del Campo"],
+    planes_desarrollo: [
+      { nombre_plan: "100 Megas", precio_plan: "50.000" },
+      { nombre_plan: "200 Megas", precio_plan: "70.000" },
+      { nombre_plan: "400 Megas", precio_plan: "90.000" }
+    ],
+    correo_desarrollo: "ciudad.campo@cablecauca.com",
+  },
+];
+
+// ==========================
+// Renderizar tabla de desarrollos
+// ==========================
+
+function renderDesarrollos() {
+  const tbody = document.getElementById("desarrollos-tbody");
+  if (!tbody) return;
+
+  function renderListDesarrollos(list) {
+    tbody.innerHTML = "";
+    list.forEach((desarrollos, index) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+      <td>${desarrollos.nombre_desarrollo}</td>
+      <td>${desarrollos.telefono_desarrollo}</td>
+      <td>${desarrollos.direccion_desarrollo}</td>
+      <td>${desarrollos.Encargado_desarrollo}</td>
+      <td>
+        <button class="view-button" data-index="${desarrollosData.indexOf(
+          desarrollos
+        )}"> Views </button>
+      </td>
+    `;
+      tbody.appendChild(tr);
+    });
+    document.querySelectorAll(".view-button").forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const index = e.target.dataset.index;
+        const desarrolloSeleccionado = desarrollosData[index];
+        localStorage.setItem(
+          "desarrolloSeleccionado",
+          JSON.stringify(desarrolloSeleccionado)
+        );
+        location.hash = "views-desarrollos";
+      });
+    });
+  }
+
+  // Función que filtra por texto
+  function filterAndRenderDesarrollos() {
+    const text = (
+      document.getElementById("filter-input-desarrollos")?.value || ""
+    )
+      .toLowerCase()
+      .trim();
+    let filtered = desarrollosData.filter((d) => {
+      const matchesText =
+        !text ||
+        d.nombre_desarrollo.toLowerCase().includes(text) ||
+        d.direccion_desarrollo.toLowerCase().includes(text) ||
+        (d.Encargado_desarrollo || "").toLowerCase().includes(text) ||
+        (d.telefono_desarrollo || "").toLowerCase().includes(text);
+      return matchesText;
+    });
+    renderListDesarrollos(filtered);
+  }
+  // Inicial render
+  renderListDesarrollos(desarrollosData);
+
+  // Añadir listeners a inputs de filtro (si existen)
+  const filterInputDesarrollos = document.getElementById(
+    "filter-input-desarrollos"
+  );
+  if (filterInputDesarrollos) {
+    filterInputDesarrollos.addEventListener("input", () => {
+      filterAndRenderDesarrollos();
+    });
+  }
+}
+// ==========================
+// Renderizar vista detallada de desarrollos
+// ==========================
+
+function renderVistaDesarrollo() {
+  const desarrollo = JSON.parse(localStorage.getItem("desarrolloSeleccionado"));
+  if (!desarrollo) return;
+
+  // Nombre del desarrollo
+  const nombreDesarrollo = document.getElementById("nombre-desarrollo");
+  if (nombreDesarrollo) {
+    nombreDesarrollo.textContent = desarrollo.nombre_desarrollo;
+  }
+
+  // Información general
+  const infoGeneralDesarrollo = document.getElementById(
+    "info-general-desarrollo"
+  );
+  if (infoGeneralDesarrollo) {
+    infoGeneralDesarrollo.innerHTML = `
+      <p><strong>Encargado:</strong> ${desarrollo.Encargado_desarrollo}</p>
+      <p><strong>Teléfono:</strong> ${desarrollo.telefono_desarrollo}</p>
+      <p><strong>Dirección:</strong> ${desarrollo.direccion_desarrollo}</p>
+      <p><strong>Ciudad:</strong> ${desarrollo.ciudad_desarrollo}</p>
+      <p><strong>Departamento:</strong> ${
+        desarrollo.departamento_desarrollo
+      }</p>
+      <p><strong>Barrios:</strong> ${desarrollo.barrios_desarrollo.join(
+        ", "
+      )}</p>
+    `;
+  }
+  // Planes
+  // The template uses id="info-plan-desarrollo" for the container, so select that.
+  const infoPlanesDesarrollo = document.getElementById("info-plan-desarrollo");
+  if (infoPlanesDesarrollo) {
+    infoPlanesDesarrollo.innerHTML = desarrollo.planes_desarrollo
+      .map((plan) => `<p>${plan.nombre_plan}: ${plan.precio_plan}</p>`)
+      .join("");
+  }
+
+  //correo
+  const infoCorreoDesarrollo = document.getElementById(
+    "info-correo-desarrollo"
+  );
+  if (infoCorreoDesarrollo) {
+    infoCorreoDesarrollo.innerHTML = `
+      <p><strong>Correo:</strong> ${desarrollo.correo_desarrollo}</p>
+    `;
+  }
 }
 
 // ==========================

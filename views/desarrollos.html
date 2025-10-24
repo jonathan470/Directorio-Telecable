@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="../styles.css" />
+<section>
+  <div class="layout-desarrollos">
+    <div class="layout-desarrollos-header">
+      <h1>Registro Desarrollos</h1>
+      <button class="button-nuevo-desarrollo">+ Añadir nuevo desarrollo</button>
+    </div>
+    <div class="filter-container-desarrollos">
+      <div class="filter-box-desarrollos">
+        <input
+          type="text"
+          id="filter-input-desarrollos"
+          class="filter-input-desarrollos"
+          placeholder="🔍 Filtrar desarrollos..."
+        />
+      </div>
+    </div>
+    <div class="table-container-desarrollos">
+      <table class="desarrollos-table">
+        <thead>
+          <tr>
+            <th>Desarrollo</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
+            <th>Encargado</th>
+            <th>Accion</th>
+          </tr>
+        </thead>
+        <tbody id="desarrollos-tbody">
+          <!-- Filas de desarrollos se insertan aquí dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
