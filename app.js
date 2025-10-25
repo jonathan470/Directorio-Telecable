@@ -9,6 +9,7 @@ const credencialesValidas = [
   { email: "sistemas.general@cablecauca.com", password: "sistemasgeneral123" },
   { email: "asistente.subgerencia@cablecauca.com", password: "subgerencia123" },
   { email: "sistemas@cablecauca.com", password: "sistemas123*" },
+  { email: "retencioncomuneros@cablecauca.com", password: "retencioncomuneros123*" },
 ];
 
 // ==========================
@@ -1199,6 +1200,21 @@ const desarrollosData = [
       { nombre_plan: "400 Megas", precio_plan: "90.000" }
     ],
     correo_desarrollo: "ciudad.campo@cablecauca.com",
+  },
+  {
+    nombre_desarrollo: "Desarrollo Arce Ciudad Cordoba",
+    direccion_desarrollo: "CR 46 49 38 - Ciudad Cordoba",
+    ciudad_desarrollo: "Cali",  
+    departamento_desarrollo: "Valle del cauca",
+    Encargado_desarrollo: "Andres Alberto Arce Rojas",
+    telefono_desarrollo: "3126829740",
+    barrios_desarrollo: ["Ciudad Cordoba"],
+    planes_desarrollo: [
+      { nombre_plan: "100 Megas", precio_plan: "50.000" },
+      { nombre_plan: "300 Megas", precio_plan: "70.000" },
+      { nombre_plan: "600 Megas", precio_plan: "95.000" }
+    ],
+    correo_desarrollo: "arcenet945@gmail.com",
   },
 ];
 
