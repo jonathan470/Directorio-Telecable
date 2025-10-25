@@ -1181,8 +1181,8 @@ const desarrollosData = [
     telefono_desarrollo: "3153238184",
     barrios_desarrollo: ["Andres Sanin", "Puerto Mallarino"],
     planes_desarrollo: [
-      { nombre_plan: "100 Megas", precio_plan: "75.000" },
-      { nombre_plan: "200 Megas", precio_plan: "85.000" },
+      { nombre_plan: "100 Megas", precio_plan: "$75.000" },
+      { nombre_plan: "200 Megas", precio_plan: "$85.000" },
     ],
     correo_desarrollo: "telecableandressanin@gmail.com",
   },
@@ -1195,9 +1195,9 @@ const desarrollosData = [
     telefono_desarrollo: "3172964236",
     barrios_desarrollo: ["Ciudad del Campo"],
     planes_desarrollo: [
-      { nombre_plan: "100 Megas", precio_plan: "50.000" },
-      { nombre_plan: "200 Megas", precio_plan: "70.000" },
-      { nombre_plan: "400 Megas", precio_plan: "90.000" }
+      { nombre_plan: "100 Megas", precio_plan: "$50.000" },
+      { nombre_plan: "200 Megas", precio_plan: "$70.000" },
+      { nombre_plan: "400 Megas", precio_plan: "$90.000" }
     ],
     correo_desarrollo: "ciudad.campo@cablecauca.com",
   },
@@ -1210,12 +1210,93 @@ const desarrollosData = [
     telefono_desarrollo: "3126829740",
     barrios_desarrollo: ["Ciudad Cordoba"],
     planes_desarrollo: [
-      { nombre_plan: "100 Megas", precio_plan: "50.000" },
-      { nombre_plan: "300 Megas", precio_plan: "70.000" },
-      { nombre_plan: "600 Megas", precio_plan: "95.000" }
+      { nombre_plan: "100 Megas", precio_plan: "$50.000" },
+      { nombre_plan: "300 Megas", precio_plan: "$70.000" },
+      { nombre_plan: "600 Megas", precio_plan: "$95.000" }
     ],
     correo_desarrollo: "arcenet945@gmail.com",
   },
+  {
+    nombre_desarrollo: "Desarrollo Jorge Herrera",
+    direccion_desarrollo: "CL 86 26B 82 - Puertas del Sol 1",
+    ciudad_desarrollo: "Cali",  
+    departamento_desarrollo: "Valle del cauca",
+    Encargado_desarrollo: "Jorge Enrique Herrera Peña",
+    telefono_desarrollo: "3137475842",
+    barrios_desarrollo: ["Puertas del Sol 1", "San Marcos", "Tercer Milenio", "Ulpiano Lloreda"],
+    planes_desarrollo: [
+      { nombre_plan: "100 Megas", precio_plan: "$55.000" },
+      { nombre_plan: "300 Megas", precio_plan: "$75.000" },
+      { nombre_plan: "600 Megas", precio_plan: "$95.000" }
+    ],
+    correo_desarrollo: "jorge.herrera.jjk@hotmail.com",
+  },
+  {
+    nombre_desarrollo: "Desarrollo Charco Azul",
+    direccion_desarrollo: "CL 73 25U 34 - Charco Azul",
+    ciudad_desarrollo: "Cali",  
+    departamento_desarrollo: "Valle del cauca",
+    Encargado_desarrollo: "Andres Julian Cerezo Villaquiran",
+    telefono_desarrollo: "3225958868",
+    barrios_desarrollo: ["Charco Azul", "Lleras Restrepo", "Sector Vivero", "7 De agosto parcial"],
+    planes_desarrollo: [
+      { nombre_plan: "50 Megas", precio_plan: "$50.000" },
+      { nombre_plan: "100 Megas", precio_plan: "$60.000" },
+      { nombre_plan: "200 Megas", precio_plan: "$70.000" },
+      { nombre_plan: "300 Megas", precio_plan: "$80.000" }
+    ],
+    correo_desarrollo: "menar-799@hotmail.com",
+  },
+  {
+    nombre_desarrollo: "Desarrollo Manuela Beltran",
+    direccion_desarrollo: "CR 27A 105 150 LOCAL 03 - Manuela Beltran",
+    ciudad_desarrollo: "Cali",  
+    departamento_desarrollo: "Valle del cauca",
+    Encargado_desarrollo: "Cristian Largache",
+    telefono_desarrollo: "3158024117",
+    barrios_desarrollo: ["Manuela Beltran"],
+    planes_desarrollo: [
+      { nombre_plan: "50 Megas", precio_plan: "$50.000" },
+      { nombre_plan: "100 Megas", precio_plan: "$60.000" },
+      { nombre_plan: "200 Megas", precio_plan: "$70.000" },
+      { nombre_plan: "300 Megas", precio_plan: "$80.000" }
+    ],
+    correo_desarrollo: "telecablemanuela@gmail.com",
+  },
+  {
+    nombre_desarrollo: "Desarrollo Potrero Grande",
+    direccion_desarrollo: "CR 28D 121 BIS 97 SECTOR 8 ESQUINA - Potrero Grande",
+    ciudad_desarrollo: "Cali",  
+    departamento_desarrollo: "Valle del cauca",
+    Encargado_desarrollo: "Cristian Largache - Olmedo Cerezo",
+    telefono_desarrollo: "3157940974",
+    barrios_desarrollo: ["Potrero Grande"],
+    planes_desarrollo: [
+      { nombre_plan: "50 Megas", precio_plan: "$50.000" },
+      { nombre_plan: "100 Megas", precio_plan: "$60.000" },
+      { nombre_plan: "200 Megas", precio_plan: "$70.000" },
+      { nombre_plan: "300 Megas", precio_plan: "$80.000" }
+    ],
+    correo_desarrollo: "oficinapotrerogrande@gmail.com",
+  },
+  {
+    nombre_desarrollo: "Desarrollo El Retiro",
+    direccion_desarrollo: "CL 52 39D 71 - El Retiro",
+    ciudad_desarrollo: "Cali",  
+    departamento_desarrollo: "Valle del cauca",
+    Encargado_desarrollo: "Hermes Noguera",
+    telefono_desarrollo: "3002917947",
+    barrios_desarrollo: ["El Retiro", "Vallado", "El Valladito"],
+    planes_desarrollo: [
+      { nombre_plan: "50 Megas", precio_plan: "$50.000" },
+      { nombre_plan: "100 Megas", precio_plan: "$60.000" },
+      { nombre_plan: "200 Megas", precio_plan: "$70.000" },
+      { nombre_plan: "300 Megas", precio_plan: "$80.000" }
+    ],
+    correo_desarrollo: "retirogpon@gmail.com",  
+  },
+
+
 ];
 
 // ==========================
