@@ -25,6 +25,7 @@ function cargarVista(ruta) {
       if (ruta === "extensiones") renderExtensiones();
       if (ruta === "desarrollos") renderDesarrollos();
       if (ruta === "views-desarrollos") renderVistaDesarrollo();
+      if (ruta === "formulario") renderFormularios();
     })
     .catch((err) => {
       document.getElementById("app-content").innerHTML =
@@ -1419,6 +1420,55 @@ function renderVistaDesarrollo() {
     `;
   }
 }
+// ==========================
+// Datos simulados de formularios
+// ==========================
+
+const formulariosData = [
+  {
+    nombre_formulario: "Formulario de ventas Comuneros",
+    enlace_formulario:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdVANncsap2oOAAaN86OD_zlejuOY1n5VN5739H5Qqpbq1Png/viewform",
+  },
+  {
+    nombre_formulario: "Formulario de ventas Rio Cauca",
+    enlace_formulario:
+      "https://docs.google.com/forms/d/e/1FAIpQLScbDDd-6MJbAVd4S9MFLWsoZhJfa2W1Rc6ZRIQWf8bImoT7aQ/viewform",
+  },
+  {
+    nombre_formulario: "Formulario de ventas Marroquin",
+    enlace_formulario:
+      "https://docs.google.com/forms/d/e/1FAIpQLScbb4OK4tuKYc7B_EW1nK3vPYTTqqEZVTmAWSww2n0FvXtNew/viewform",
+  },
+  {
+    nombre_formulario: "Formulario de ventas Ceibas",
+    enlace_formulario:
+      "https://docs.google.com/forms/d/e/1FAIpQLSetAURPhFQnpJWg8fbU894ZeVvGUmOXmDbhaazeSOS_kPBSkQ/viewform",
+  },
+  {
+    nombre_formulario: "Formulario de ventas Cordoba Reservado - Antonio Nariño",
+    enlace_formulario:
+      "https://docs.google.com/forms/d/e/1FAIpQLSc6FRvX9jXrpmh8HOzUUcR9h3pqjAVVi0iAMLgLb1nsckM2zA/viewform",
+  }
+
+];
+
+function renderFormularios() {
+  const tbody = document.getElementById("formularios-tbody");
+  if (!tbody) return;
+
+  tbody.innerHTML = "";
+  formulariosData.forEach((formulario) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${formulario.nombre_formulario}</td>
+      <td><a class="btn-primary" href="${formulario.enlace_formulario}" target="_blank" rel="noopener noreferrer">Abrir Formulario</a></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+
 
 // ==========================
 // Función para cerrar sesión
