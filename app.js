@@ -10,6 +10,7 @@ const credencialesValidas = [
   { email: "asistente.subgerencia@cablecauca.com", password: "subgerencia123" },
   { email: "sistemas@cablecauca.com", password: "sistemas123*" },
   { email: "retencioncomuneros@cablecauca.com", password: "retencioncomuneros123*" },
+  { email: "subgerencia@cablecauca.com", password: "gerenciageneral123*" },
 ];
 
 // ==========================
